@@ -14,6 +14,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var refreshControl: UIRefreshControl!
     
     var movies: [[String:Any]] = []
@@ -29,6 +30,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     }
     
     func didPullToRequest(_ refreshControl: UIRefreshControl) {
+        activityIndicator.startAnimating()
         fetchMovies()
     }
     
@@ -47,6 +49,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 self.movies = movies
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                self.activityIndicator.stopAnimating()
             }
         }
         task.resume()
