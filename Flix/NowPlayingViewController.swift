@@ -39,8 +39,18 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
-            // This will run when the network request returns
             if let error = error {
+                let alerController = UIAlertController(title: "Error", message: "Not connected to any network", preferredStyle: .alert)
+                let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+                    
+                })
+                let okButton = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    
+                })
+                alerController.addAction(cancelButton)
+                alerController.addAction(okButton)
+                self.present(alerController, animated: true) {
+                }
                 print(error.localizedDescription)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]

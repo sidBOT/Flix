@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7AE32C200DA1C600D5998D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7AE32B200DA1C600D5998D /* DetailViewController.swift */; };
 		1FC6E2F5200BD16F007EC6AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC6E2F4200BD16F007EC6AB /* AppDelegate.swift */; };
 		1FC6E2FA200BD16F007EC6AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC6E2F8200BD16F007EC6AB /* Main.storyboard */; };
 		1FC6E2FD200BD16F007EC6AB /* Flix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FC6E2FB200BD16F007EC6AB /* Flix.xcdatamodeld */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F7AE32B200DA1C600D5998D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1FC6E2F1200BD16F007EC6AB /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC6E2F4200BD16F007EC6AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FC6E2F9200BD16F007EC6AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				1FC6E303200BD16F007EC6AB /* Info.plist */,
 				1FC6E2FB200BD16F007EC6AB /* Flix.xcdatamodeld */,
 				1FEAA73D200C1EAF0052CD99 /* MovieCell.swift */,
+				1F7AE32B200DA1C600D5998D /* DetailViewController.swift */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 			files = (
 				1FC6E2FD200BD16F007EC6AB /* Flix.xcdatamodeld in Sources */,
 				1FEAA73C200C178C0052CD99 /* NowPlayingViewController.swift in Sources */,
+				1F7AE32C200DA1C600D5998D /* DetailViewController.swift in Sources */,
 				1FEAA73E200C1EAF0052CD99 /* MovieCell.swift in Sources */,
 				1FC6E2F5200BD16F007EC6AB /* AppDelegate.swift in Sources */,
 			);
