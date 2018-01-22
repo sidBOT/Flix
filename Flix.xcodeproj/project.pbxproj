@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1F7AE32C200DA1C600D5998D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7AE32B200DA1C600D5998D /* DetailViewController.swift */; };
+		1F94ACC720157FC700567629 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA248F42010164E00E374AC /* SuperheroViewController.swift */; };
+		1F94ACC820157FCC00567629 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA248F42010164E00E374AC /* SuperheroViewController.swift */; };
+		1F94ACC920157FCD00567629 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA248F42010164E00E374AC /* SuperheroViewController.swift */; };
 		1FA248F32010161500E374AC /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA248F22010161500E374AC /* PosterCell.swift */; };
-		1FA248F52010164E00E374AC /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA248F42010164E00E374AC /* SuperheroViewController.swift */; };
 		1FC6E2F5200BD16F007EC6AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC6E2F4200BD16F007EC6AB /* AppDelegate.swift */; };
 		1FC6E2FA200BD16F007EC6AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC6E2F8200BD16F007EC6AB /* Main.storyboard */; };
 		1FC6E2FD200BD16F007EC6AB /* Flix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FC6E2FB200BD16F007EC6AB /* Flix.xcdatamodeld */; };
@@ -479,7 +481,7 @@
 				1FEAA73C200C178C0052CD99 /* NowPlayingViewController.swift in Sources */,
 				1FA248F32010161500E374AC /* PosterCell.swift in Sources */,
 				1F7AE32C200DA1C600D5998D /* DetailViewController.swift in Sources */,
-				1FA248F52010164E00E374AC /* SuperheroViewController.swift in Sources */,
+				1F94ACC820157FCC00567629 /* SuperheroViewController.swift in Sources */,
 				1FEAA73E200C1EAF0052CD99 /* MovieCell.swift in Sources */,
 				1FC6E2F5200BD16F007EC6AB /* AppDelegate.swift in Sources */,
 			);
@@ -489,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F94ACC920157FCD00567629 /* SuperheroViewController.swift in Sources */,
 				1FC6E30D200BD16F007EC6AB /* FlixTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F94ACC720157FC700567629 /* SuperheroViewController.swift in Sources */,
 				1FC6E318200BD170007EC6AB /* FlixUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
