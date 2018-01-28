@@ -48,6 +48,8 @@ class DetailViewController: UIViewController {
             let posterPathURL = URL(string: baseURLString + posterPathString)!
             posterImageView.af_setImage(withURL: posterPathURL)
             
+        
+            
             
         }
 
