@@ -17,7 +17,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var refreshControl: UIRefreshControl!
     
-    var movies: [[String:Any]] = []
+    //var movies: [[String:Any]] = []
+    var movies: [Movie] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,9 +55,13 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 print(error.localizedDescription)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                let movieDictionaries = dataDictionary["results"] as! [[String: Any]]
                 
-                let movies = dataDictionary["results"] as! [[String: Any]]
-                self.movies = movies
+                self.movies = []
+                for dictionary in movieDictionaries {
+                    let movie = Movie(dictionary: dictionary)
+                    self.movies.append(movie)
+                }
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
                 self.activityIndicator.stopAnimating()
@@ -77,25 +82,25 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for:indexPath) as! MovieCell
         
         let movie = movies[indexPath.row]
-        let title = movie["title"] as! String
-        let overview = movie["overview"] as! String
+        let title = movie.title
+        let overview = movie.overview
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
-        let posterPathString = movie["poster_path"] as! String
-        let baseURLString = "https://image.tmdb.org/t/p/w500"
-        let posterURL = URL(string: baseURLString + posterPathString)!
-        cell.photoView.af_setImage(withURL: posterURL)
+    
+        let posterURL = movie.posterUrl
+        cell.photoView.af_setImage(withURL: posterURL!)
         return cell
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        if let indexPath = tableView.indexPath(for: cell) {
-        
-            let movie = movies[indexPath.row]
+        let cell = sender as! MovieCell
+        if let indexPath = tableView.indexPath(for: cell){
+            let abcd = movies [indexPath.row]
             let detailViewController = segue.destination as! DetailViewController
-            detailViewController.movie = movie
+            detailViewController.movie = abcd
+            
+            
         }
     }
     
